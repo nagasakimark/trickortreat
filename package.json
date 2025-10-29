@@ -1,0 +1,31 @@
+{
+  "name": "halloween-game",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "deploy": "cross-env NODE_OPTIONS=--openssl-legacy-provider push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@tweenjs/tween.js": "^17.2.0",
+    "firebase": "^8.10.1",
+    "lottie-web": "^5.12.2",
+    "simple-peer": "^9.11.1",
+    "three": "^0.97.0",
+    "vue": "^2.5.17",
+    "vue-analytics": "^5.16.0",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.5",
+    "@vue/cli-plugin-eslint": "^3.0.5",
+    "@vue/cli-service": "^3.0.5",
+    "@vue/eslint-config-standard": "^3.0.5",
+    "sass": "^1.32.0",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^7.3.1",
+    "vue-template-compiler": "^2.5.17"
+  }
+}

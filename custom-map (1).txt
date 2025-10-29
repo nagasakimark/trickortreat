@@ -1,0 +1,12 @@
+
+┏━┳━━┳━━━━┓
+┃P┃PP┃PPPP┃
+┃P┃PP┃PPPP┃
+┃P┃PP┃PPPP┃
+┃P┃PP┃PPPP┃
+┣━┻━━S━━━━┫
+┃PPPP┃PPPP┃
+┃PPPP┃PPPP┃
+┃PPPP┃PPPP┃
+┃PPPP┃PPPP┃
+┗━━━━┻━━━━┛
