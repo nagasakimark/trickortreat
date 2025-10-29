@@ -11,14 +11,14 @@
     
     <!-- QR Code Button - Only visible on lobby/pause screens -->
     <div v-if="showQRButton" class="qr-code-button" @click.stop="toggleQRCode">
-      <img src="/qricon.png" alt="QR Code" class="qr-icon" />
+      <img :src="baseUrl + 'qricon.png'" alt="QR Code" class="qr-icon" />
     </div>
     
     <!-- QR Code Modal -->
     <div v-if="showQR" class="qr-modal" @click="toggleQRCode">
       <div class="qr-content" @click.stop>
         <div class="qr-placeholder">
-          <img src="/qrcode.png" alt="QR Code" />
+          <img :src="baseUrl + 'qrcode.png'" alt="QR Code" />
         </div>
         <button class="close-qr" @click="toggleQRCode">Close</button>
       </div>
@@ -74,6 +74,9 @@ export default {
     ...mapGetters([
       'mode'
     ]),
+    baseUrl () {
+      return process.env.BASE_URL
+    },
     showQRButton () {
       // Show QR code button only on lobby or pause (levelSelect) screens
       return this.mode === 'lobby' || this.mode === 'levelSelect'
@@ -145,6 +148,13 @@ body *:after {
     path {
       fill: #ddd;
     }
+  }
+
+  .control-icon {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 

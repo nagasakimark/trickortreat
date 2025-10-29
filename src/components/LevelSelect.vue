@@ -18,27 +18,27 @@
       <div class="directions-section">
         <h3>方向の伝え方</h3>
         <div class="direction-item">
-          <img src="/gostraight.png" alt="Go straight" class="icon" />
+          <img :src="baseUrl + 'gostraight.png'" alt="Go straight" class="icon" />
           <span class="text">Go straight for <strong>〇 block(s)</strong></span>
         </div>
         <div class="direction-item">
-          <img src="/gostraightlittle.png" alt="Go straight a little" class="icon" />
+          <img :src="baseUrl + 'gostraightlittle.png'" alt="Go straight a little" class="icon" />
           <span class="text">Go straight for <strong>a little bit</strong></span>
         </div>
         <div class="direction-item">
-          <img src="/turnright.png" alt="Turn right" class="icon" />
+          <img :src="baseUrl + 'turnright.png'" alt="Turn right" class="icon" />
           <span class="text"><strong>Turn right</strong></span>
         </div>
         <div class="direction-item">
-          <img src="/turnleft.png" alt="Turn left" class="icon" />
+          <img :src="baseUrl + 'turnleft.png'" alt="Turn left" class="icon" />
           <span class="text"><strong>Turn left</strong></span>
         </div>
         <div class="direction-item">
-          <img src="/seeleft.png" alt="See left" class="icon" />
+          <img :src="baseUrl + 'seeleft.png'" alt="See left" class="icon" />
           <span class="text">You can see it on your <strong>left</strong></span>
         </div>
         <div class="direction-item">
-          <img src="/seeright.png" alt="See right" class="icon" />
+          <img :src="baseUrl + 'seeright.png'" alt="See right" class="icon" />
           <span class="text">You can see it on your <strong>right</strong></span>
         </div>
       </div>
@@ -55,6 +55,11 @@
 
 <script>
 export default {
+  computed: {
+    baseUrl () {
+      return process.env.BASE_URL
+    }
+  },
   methods: {
     closeMenu (event) {
       if (event) {
